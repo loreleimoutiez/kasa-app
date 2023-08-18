@@ -5,7 +5,7 @@ import housingData from '../../Data/logements.json';
 
 export function Home() {
     return (
-      <div>
+      <main>
         <Banner bannerImage="home-banner" />
         <div className="card-container"> 
           <div className="card-grid">
@@ -18,6 +18,6 @@ export function Home() {
             ))}
           </div>
         </div>
-      </div>
+      </main>
     );
 }
