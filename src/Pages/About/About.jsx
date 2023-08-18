@@ -4,7 +4,7 @@ import { Collapse } from '../../Components/Collapse/Collapse';
 
 export function About() {
     return (
-      <main>
+      <main className='App'>
         <Banner showTitle={false} bannerImage="about-banner" />
         <Collapse />
       </main>
