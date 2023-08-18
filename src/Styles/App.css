@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap");
 /* Body */
@@ -56,6 +57,7 @@ body {
 }
 
 footer {
+  flex-shrink: 0;
   margin-top: auto;
   height: 200px;
   background: #000000;
@@ -182,7 +184,7 @@ footer p {
 }
 
 .collapse_container {
-  width: 80%;
+  width: 65%;
   margin: 30px auto;
   font-family: Montserrat;
   font-size: 1.2rem;
@@ -190,9 +192,14 @@ footer p {
   line-height: 20px;
   letter-spacing: 0em;
   text-align: left;
+  color: #FF6060;
 }
-.collapse_container button {
-  margin: 30px auto;
+.collapse_container .collapse_element {
+  background-color: #F7F7F7;
+  border-radius: 5px;
+}
+.collapse_container .collapse_element button {
+  margin: 15px auto;
   width: 100%;
   height: 45px;
   border-radius: 10px;
@@ -208,4 +215,21 @@ footer p {
   align-items: center;
   border: none;
   cursor: pointer;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+.collapse_container .collapse_element button .chevron {
+  height: 0.8rem;
+  width: auto;
+  transition: transform 0.3s;
+}
+.collapse_container .collapse_element button .chevron[alt=Réduire] {
+  transform: rotate(360deg);
+}
+.collapse_container .collapse_element .text {
+  padding: 0 15px 15px 15px;
+}
+
+h1 {
+  color: red;
 }/*# sourceMappingURL=App.css.map */
