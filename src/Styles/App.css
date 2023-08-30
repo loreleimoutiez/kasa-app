@@ -22,33 +22,79 @@ header {
   align-items: center;
   justify-content: space-between;
   z-index: 10;
-  /* Nav */
 }
-header nav {
-  /* List */
+@media (min-width: 386px) {
+  header {
+    /* Nav */
+  }
+  header nav {
+    /* List */
+  }
+  header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    /* Accueil */
+    /* A Propos */
+  }
+  header nav ul .home a {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 142.6%;
+    color: #FF6060;
+  }
+  header nav ul .about a {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 142.6%;
+    color: #FF6060;
+  }
 }
-header nav ul {
-  list-style: none;
+@media (max-width: 385px) {
+  header {
+    width: 90%;
+    /* Nav */
+  }
+  header nav {
+    /* List */
+  }
+  header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    padding: 0;
+    /* Accueil */
+    /* A Propos */
+  }
+  header nav ul .home a {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #FF6060;
+    text-transform: uppercase;
+  }
+  header nav ul .about a {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #FF6060;
+    text-transform: uppercase;
+  }
+  header img {
+    width: 150px;
+  }
+}
+
+#root, .App {
   display: flex;
-  gap: 50px;
-  /* Accueil */
-  /* A Propos */
-}
-header nav ul .home a {
-  font-family: "Montserrat", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 142.6%;
-  color: #FF6060;
-}
-header nav ul .about a {
-  font-family: "Montserrat", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 142.6%;
-  color: #FF6060;
+  flex-direction: column;
+  flex: 1 0 auto;
 }
 
 body {
@@ -58,34 +104,52 @@ body {
   margin: 0;
 }
 
-#root, .App { /* Si vous utilisez Create React App ou une classe de conteneur principal comme `.App` */
-  display: flex;
-  flex-direction: column;
-  flex: 1 0 auto; /* Cela permet à votre contenu de grandir pour occuper l'espace disponible */
+@media (min-width: 386px) {
+  footer {
+    flex-shrink: 0;
+    height: 200px;
+    background: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  footer .logo {
+    position: relative;
+  }
+  footer p {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 142.6%;
+    text-align: center;
+    color: white;
+  }
 }
-
-footer {
-  flex-shrink: 0;
-  height: 200px;
-  background: #000000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+@media (max-width: 385px) {
+  footer {
+    flex-shrink: 0;
+    height: 200px;
+    background: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  footer .logo {
+    position: relative;
+  }
+  footer p {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 142.6%;
+    text-align: center;
+    color: white;
+  }
 }
-footer .logo {
-  position: relative;
-}
-footer p {
-  font-family: "Montserrat", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 142.6%;
-  text-align: center;
-  color: white;
-}
-
 .banner {
   position: relative;
   width: 80%;
@@ -136,60 +200,139 @@ footer p {
   z-index: 2;
 }
 
-.card-container {
-  position: relative;
-  width: 75%;
-  margin: 2rem auto;
-  background: #F7F7F7;
-  border-radius: 25px;
-  padding: 2.6rem;
+@media (max-width: 385px) {
+  .banner {
+    position: relative;
+    width: 95%;
+    height: 130px;
+    margin-top: 50px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .banner.about-banner .logo, .banner.about-banner .background {
+    margin-top: 90px;
+    height: 223px;
+  }
+  .banner .logo, .banner .background {
+    width: 95%;
+    border-radius: 15px;
+  }
+  .banner h1 {
+    font-size: 1.6rem;
+    text-align: start;
+    margin: 25px;
+  }
 }
-.card-container .card-grid {
-  display: flex;
-  flex-wrap: wrap;
+@media (min-width: 386px) {
+  .card-container {
+    position: relative;
+    width: 75%;
+    margin: 2rem auto;
+    background: #F7F7F7;
+    border-radius: 25px;
+    padding: 2.6rem;
+  }
+  .card-container .card-grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .card-container .card {
+    position: relative;
+    width: calc(33% - 2rem);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 1rem;
+  }
+  .card-container .card::before {
+    content: "";
+    float: left;
+    padding-top: 100%;
+  }
+  .card-container .card .image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+  .card-container .card .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  }
+  .card-container .card .title {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 142.6%;
+    color: #FFFFFF;
+    text-align: left;
+    text-shadow: 1px 1px 2px black;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
-.card-container .card {
-  position: relative;
-  width: calc(33% - 2rem);
-  border-radius: 10px;
-  overflow: hidden;
-  margin: 1rem;
+@media (max-width: 385px) {
+  .card-container {
+    position: relative;
+    border-radius: 25px;
+    width: 90%;
+    margin-top: 25px;
+  }
+  .card-container .card-grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .card-container .card {
+    position: relative;
+    width: calc(50% - 10px); /* 50% moins l'espacement entre les cartes */
+    padding-bottom: calc(50% - 10px); /* Créer un carré */
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    height: 100px;
+    margin-bottom: 25px;
+  }
+  .card-container .card .image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+  .card-container .card .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  }
+  .card-container .card a {
+    padding: 0;
+  }
+  .card-container .card .title {
+    width: 50%;
+    position: absolute;
+    bottom: 10px;
+    left: 25px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    color: #FFFFFF;
+    text-align: left;
+    text-shadow: 1px 1px 2px black;
+  }
 }
-.card-container .card::before {
-  content: "";
-  float: left;
-  padding-top: 100%;
-}
-.card-container .card .image {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-}
-.card-container .card .overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
-}
-.card-container .card .title {
-  position: absolute;
-  bottom: 10px;
-  left: 0;
-  right: 0;
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 142.6%;
-  color: #FFFFFF;
-  text-align: left;
-  text-shadow: 1px 1px 2px black;
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
 .collapse_container {
   width: 65%;
   margin: 30px auto;
@@ -202,11 +345,15 @@ footer p {
   color: #FF6060;
 }
 .collapse_container .collapse_element {
-  background-color: #F7F7F7;
+  background-color: transparent;
   border-radius: 5px;
 }
+.collapse_container .collapse_element.open {
+  background-color: #F7F7F7;
+  margin-bottom: 15px;
+}
 .collapse_container .collapse_element button {
-  margin: 15px auto;
+  margin: 0 auto 30px auto;
   width: 100%;
   height: 45px;
   border-radius: 10px;
@@ -340,4 +487,101 @@ main p {
   display: flex;
   align-items: flex-end;
   text-decoration-line: underline;
+}
+
+.logement-details {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.logement-details .heading-host-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.logement-details .heading {
+  display: flex;
+  flex-direction: column;
+}
+.logement-details h2, .logement-details p, .logement-details h3 {
+  color: #FF6060;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+.logement-details p {
+  font-size: 1.4rem;
+}
+.logement-details h2 {
+  font-size: 2.8rem;
+  margin-bottom: 0;
+  margin-top: 30px;
+}
+.logement-details .tag-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 170px));
+  gap: 8px;
+}
+.logement-details .tag {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  background-color: #FF6060;
+  font-size: 14px;
+  color: white;
+  border-radius: 10px;
+  padding: 5px 10px;
+  text-align: center;
+}
+.logement-details .host-info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.logement-details .host-info .host-name {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.logement-details .host-info .host-name h3 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+.logement-details .host-info img {
+  border-radius: 80px;
+  width: 80px;
+  height: auto;
+  margin: 0 0 5px 10px;
+}
+.logement-details .rating {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+.logement-details .rating-star {
+  width: 40px;
+  height: auto;
+  margin-right: 4px;
+}
+.logement-details .heading {
+  width: 70%;
+}
+.logement-details .host-rating {
+  width: 30%;
+  margin-top: 30px;
+}
+.logement-details .collapse_container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.logement-details .collapse_container .collapse_element {
+  width: 47%;
+  margin: 0;
+}
+.logement-details .collapse_container .collapse_element ul {
+  padding: 0;
+}
+.logement-details .collapse_container .collapse_element ul li {
+  list-style: none;
 }/*# sourceMappingURL=App.css.map */
