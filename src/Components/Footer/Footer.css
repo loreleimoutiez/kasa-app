@@ -36,6 +36,9 @@ body {
   }
 }
 @media (max-width: 385px) {
+  #root, .App {
+    justify-content: space-between;
+  }
   footer {
     flex-shrink: 0;
     height: 200px;

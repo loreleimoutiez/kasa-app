@@ -25,6 +25,7 @@ export function About() {
     return (
       <main className='App'>
         <Banner showTitle={false} bannerImage="about-banner" />
+        <div className='whitespace'></div>
         <Collapse items={items} />
       </main>
     );
