@@ -19,31 +19,71 @@ header {
   align-items: center;
   justify-content: space-between;
   z-index: 10;
-  /* Nav */
 }
-header nav {
-  /* List */
+@media (min-width: 386px) {
+  header {
+    /* Nav */
+  }
+  header nav {
+    /* List */
+  }
+  header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    /* Accueil */
+    /* A Propos */
+  }
+  header nav ul .home a {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 142.6%;
+    color: #FF6060;
+  }
+  header nav ul .about a {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 142.6%;
+    color: #FF6060;
+  }
 }
-header nav ul {
-  list-style: none;
-  display: flex;
-  gap: 50px;
-  /* Accueil */
-  /* A Propos */
-}
-header nav ul .home a {
-  font-family: "Montserrat", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 142.6%;
-  color: #FF6060;
-}
-header nav ul .about a {
-  font-family: "Montserrat", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 142.6%;
-  color: #FF6060;
+@media (max-width: 385px) {
+  header {
+    width: 90%;
+    /* Nav */
+  }
+  header nav {
+    /* List */
+  }
+  header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    padding: 0;
+    /* Accueil */
+    /* A Propos */
+  }
+  header nav ul .home a {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #FF6060;
+    text-transform: uppercase;
+  }
+  header nav ul .about a {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #FF6060;
+    text-transform: uppercase;
+  }
+  header img {
+    width: 150px;
+  }
 }/*# sourceMappingURL=Navbar.css.map */
