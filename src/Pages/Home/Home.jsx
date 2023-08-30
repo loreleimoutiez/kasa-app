@@ -4,20 +4,21 @@ import Card from '../../Components/Card/Card';
 import housingData from '../../Data/logements.json';  
 
 export function Home() {
-    return (
-      <main>
-        <Banner bannerImage="home-banner" />
-        <div className="card-container"> 
-          <div className="card-grid">
-            {housingData.map((house) => (
-              <Card
-                key={house.id}
-                image={house.cover}
-                title={house.title}
-              />
-            ))}
-          </div>
+  return (
+    <main>
+      <Banner bannerImage="home-banner" />
+      <div className="card-container"> 
+        <div className="card-grid">
+          {housingData.map((house) => (
+            <Card
+              key={house.id}
+              image={house.cover}
+              title={house.title}
+              id={house.id}  
+            />
+          ))}
         </div>
-      </main>
-    );
+      </div>
+    </main>
+  );
 }
