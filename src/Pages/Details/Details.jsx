@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { Slideshow } from '../../Components/Slideshow/Slideshow';
 import { Collapse } from '../../Components/Collapse/Collapse';
 import data from '../../Data/logements.json';
-import { Navigate } from 'react-router-dom';
+import { Navigate } from 'react-router-dom'; // utilisé pour effectuer des redirections ou des navigations vers des routes spécifiques de l'application
 import starActive from '../../Assets/star-active.png';
 import starInactive from '../../Assets/star-inactive.png';
 
@@ -25,7 +25,7 @@ const renderRatingStars = (rating) => {
 
 export const Details = () => {
     const { id } = useParams();
-    const logement = data.find(item => item.id === id);
+    const logement = data.find(item => item.id === id); // trouve et stocke dans la variable logement un élément du tableau data avec une id = valeur fournie 
 
     // Si l'id du logement est incorrecte 
     if (!logement) {

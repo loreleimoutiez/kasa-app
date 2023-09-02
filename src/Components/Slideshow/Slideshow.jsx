@@ -6,9 +6,9 @@ export const Slideshow = ({ logement }) => {
 
     const updateIndex = (newIndex) => {
         if (newIndex < 0) {
-            newIndex = logement.pictures.length - 1;
+            newIndex = logement.pictures.length - 1; //  la fonction déplace l'indice actif à la dernière image du diaporama
         } else if (newIndex >= logement.pictures.length) {
-            newIndex = 0;
+            newIndex = 0; // la fonction déplace l'indice actif à la première image
         }
         setActiveIndex(newIndex);
     }    
@@ -22,7 +22,8 @@ export const Slideshow = ({ logement }) => {
                 })}
             </div>
 
-            {logement.pictures.length > 1 && (
+            {logement.pictures.length > 1 && ( // vérifie si le nombre d'images dans le diaporama (logement.pictures.length) est supérieur à 1. 
+                                              // Si c'est le cas, cela signifie qu'il y a plus d'une image à afficher = active la navigation 
                 <>
                     <div className="carousel-buttons">
                         <button className="button-arrow" onClick={() => updateIndex(activeIndex - 1)}>

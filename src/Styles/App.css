@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap");
 /* Body */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap");
 body {
   margin: 0;
   padding: 0;
@@ -24,12 +25,6 @@ header {
   z-index: 10;
 }
 @media (min-width: 386px) {
-  header {
-    /* Nav */
-  }
-  header nav {
-    /* List */
-  }
   header nav ul {
     list-style: none;
     display: flex;
@@ -58,9 +53,6 @@ header {
   header {
     width: 90%;
     /* Nav */
-  }
-  header nav {
-    /* List */
   }
   header nav ul {
     list-style: none;
@@ -128,6 +120,9 @@ body {
   }
 }
 @media (max-width: 385px) {
+  #root, .App {
+    justify-content: space-between;
+  }
   footer {
     flex-shrink: 0;
     height: 200px;
@@ -175,7 +170,7 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: url("../../Assets/homepage_banner.png");
+  background: url("/src/Assets/homepage_banner.png");
   background-repeat: no-repeat;
   z-index: 0;
   border-radius: 25px;
@@ -183,7 +178,7 @@ body {
   background-position: center center;
 }
 .banner.about-banner .logo {
-  background: url("../../Assets/about_banner.png");
+  background: url("/src/Assets/about_banner.png");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center center;
@@ -333,255 +328,498 @@ body {
     text-shadow: 1px 1px 2px black;
   }
 }
-.collapse_container {
-  width: 65%;
-  margin: 30px auto;
-  font-family: Montserrat;
-  font-size: 1.2rem;
-  font-weight: 400;
-  line-height: 20px;
-  letter-spacing: 0em;
-  text-align: left;
-  color: #FF6060;
+@media (min-width: 386px) {
+  .collapse_container {
+    width: 65%;
+    margin: 30px auto;
+    font-family: Montserrat;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #FF6060;
+  }
+  .collapse_container .collapse_element {
+    background-color: transparent;
+    border-radius: 5px;
+  }
+  .collapse_container .collapse_element.open {
+    background-color: #F7F7F7;
+    margin-bottom: 15px;
+  }
+  .collapse_container .collapse_element button {
+    margin: 0 auto 30px auto;
+    width: 100%;
+    height: 45px;
+    border-radius: 10px;
+    background: #FF6060;
+    border-radius: 5px;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 34px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    justify-content: space-between;
+    padding: 0 15px;
+  }
+  .collapse_container .collapse_element button .chevron {
+    height: 0.8rem;
+    width: auto;
+    transition: transform 0.3s;
+  }
+  .collapse_container .collapse_element button .chevron[alt=Réduire] {
+    transform: rotate(360deg);
+  }
+  .collapse_container .collapse_element .text {
+    padding: 0 15px 15px 15px;
+  }
 }
-.collapse_container .collapse_element {
-  background-color: transparent;
-  border-radius: 5px;
+@media (max-width: 385px) {
+  .whitespace {
+    height: 100px;
+  }
+  .collapse_container {
+    width: 90%;
+    margin-top: 20px;
+    font-family: Montserrat;
+    font-weight: 400;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #FF6060;
+  }
+  .collapse_container .collapse_element {
+    background-color: transparent;
+    border-radius: 5px;
+  }
+  .collapse_container .collapse_element.open {
+    background-color: #F7F7F7;
+    margin-bottom: 15px;
+  }
+  .collapse_container .collapse_element button {
+    margin: 0 auto 25px auto;
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    background: #FF6060;
+    border-radius: 5px;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    justify-content: space-between;
+    padding: 0 15px;
+  }
+  .collapse_container .collapse_element button .chevron {
+    height: 0.7rem;
+    width: auto;
+    transition: transform 0.3s;
+  }
+  .collapse_container .collapse_element button .chevron[alt=Réduire] {
+    transform: rotate(360deg);
+  }
+  .collapse_container .collapse_element .text {
+    font-size: 14px;
+    padding: 0 15px 15px 15px;
+  }
 }
-.collapse_container .collapse_element.open {
-  background-color: #F7F7F7;
-  margin-bottom: 15px;
+@media (min-width: 386px) {
+  .App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .carousel {
+    padding-top: 100px;
+    overflow: hidden;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+  .inner {
+    width: 100%;
+    white-space: nowrap;
+    transition: transform 0.3s;
+  }
+  .carousel-item {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .carousel-img {
+    width: 100%;
+    height: 500px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 50% 60%;
+       object-position: 50% 60%;
+    border-radius: 25px;
+  }
+  .carousel-buttons {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+  }
+  .button-arrow {
+    color: white;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  }
+  .button-arrow .material-symbols-outlined {
+    font-size: 8em;
+  }
+  .image-indicator {
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    padding: 5px;
+    color: white;
+    text-shadow: 0px 0px 5px rgb(0, 0, 0);
+  }
 }
-.collapse_container .collapse_element button {
-  margin: 0 auto 30px auto;
-  width: 100%;
-  height: 45px;
-  border-radius: 10px;
-  background: #FF6060;
-  border-radius: 5px;
-  font-family: "Montserrat", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 34px;
-  color: #FFFFFF;
-  display: flex;
-  align-items: center;
-  border: none;
-  cursor: pointer;
-  justify-content: space-between;
-  padding: 0 15px;
+@media (max-width: 385px) {
+  .App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .carousel {
+    padding-top: 55px;
+    overflow: hidden;
+    width: 91%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+  .inner {
+    width: 100%;
+    white-space: nowrap;
+    transition: transform 0.3s;
+  }
+  .carousel-item {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .carousel-img {
+    width: 100%;
+    height: 300px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 50% 60%;
+       object-position: 50% 60%;
+    border-radius: 25px;
+  }
+  .carousel-buttons {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+  }
+  .button-arrow {
+    color: white;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  }
+  .button-arrow .material-symbols-outlined {
+    font-size: 2em;
+  }
+  .image-indicator {
+    display: none;
+  }
 }
-.collapse_container .collapse_element button .chevron {
-  height: 0.8rem;
-  width: auto;
-  transition: transform 0.3s;
+@media (min-width: 386px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #FF6060;
+  }
+  main .error_msg {
+    font-size: 15rem;
+    width: 597px;
+    height: 250px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+  }
+  main h2 {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 100px;
+  }
+  main p {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: flex-end;
+    text-decoration-line: underline;
+  }
 }
-.collapse_container .collapse_element button .chevron[alt=Réduire] {
-  transform: rotate(360deg);
+@media (max-width: 385px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #FF6060;
+  }
+  main .error_msg {
+    font-size: 6rem;
+    width: 90%;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    margin-top: 200px;
+    margin-bottom: 0;
+  }
+  main h2 {
+    width: 80%;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: flex-end;
+  }
+  main p {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: flex-end;
+    text-decoration-line: underline;
+    margin-top: 80px;
+  }
 }
-.collapse_container .collapse_element .text {
-  padding: 0 15px 15px 15px;
+@media (min-width: 386px) {
+  .logement-details {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .logement-details .heading-host-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .logement-details .heading {
+    display: flex;
+    flex-direction: column;
+  }
+  .logement-details h2, .logement-details p, .logement-details h3 {
+    color: #FF6060;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+  }
+  .logement-details p {
+    font-size: 1.4rem;
+  }
+  .logement-details h2 {
+    font-size: 2.8rem;
+    margin-bottom: 0;
+    margin-top: 30px;
+  }
+  .logement-details .tag-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 170px));
+    gap: 8px;
+  }
+  .logement-details .tag {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    background-color: #FF6060;
+    font-size: 14px;
+    color: white;
+    border-radius: 10px;
+    padding: 5px 10px;
+    text-align: center;
+  }
+  .logement-details .host-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .logement-details .host-info .host-name {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .logement-details .host-info .host-name h3 {
+    margin: 0;
+    font-size: 1.4rem;
+  }
+  .logement-details .host-info img {
+    border-radius: 80px;
+    width: 80px;
+    height: auto;
+    margin: 0 0 5px 10px;
+  }
+  .logement-details .rating {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+  .logement-details .rating-star {
+    width: 40px;
+    height: auto;
+    margin-right: 4px;
+  }
+  .logement-details .heading {
+    width: 70%;
+  }
+  .logement-details .host-rating {
+    width: 30%;
+    margin-top: 30px;
+  }
+  .logement-details .collapse_container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .logement-details .collapse_container .collapse_element {
+    width: 47%;
+    margin: 0;
+  }
+  .logement-details .collapse_container .collapse_element ul {
+    padding: 0;
+  }
+  .logement-details .collapse_container .collapse_element ul li {
+    list-style: none;
+  }
 }
-
-.App {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.carousel {
-  padding-top: 100px;
-  overflow: hidden;
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-}
-
-.inner {
-  width: 100%;
-  white-space: nowrap;
-  transition: transform 0.3s;
-}
-
-.carousel-item {
-  width: 100%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.carousel-img {
-  width: 100%;
-  height: 500px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 50% 60%;
-     object-position: 50% 60%;
-  border-radius: 25px;
-}
-
-.carousel-buttons {
-  display: flex;
-  justify-content: space-between;
-  position: absolute;
-  width: 100%;
-}
-
-.button-arrow {
-  color: white;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
-}
-
-.button-arrow .material-symbols-outlined {
-  font-size: 8em;
-}
-
-.image-indicator {
-  font-size: 1.2rem;
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  padding: 5px;
-  color: white;
-  text-shadow: 0px 0px 5px rgb(0, 0, 0);
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  color: #FF6060;
-}
-main .error_msg {
-  font-size: 14rem;
-  width: 597px;
-  height: 263px;
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 288px;
-  /* or 411px */
-}
-main h2 {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 36px;
-  /* or 51px */
-  display: flex;
-  align-items: flex-end;
-}
-main p {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 1.2rem;
-  /* identical to box height, or 26px */
-  display: flex;
-  align-items: flex-end;
-  text-decoration-line: underline;
-}
-
-.logement-details {
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.logement-details .heading-host-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.logement-details .heading {
-  display: flex;
-  flex-direction: column;
-}
-.logement-details h2, .logement-details p, .logement-details h3 {
-  color: #FF6060;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-}
-.logement-details p {
-  font-size: 1.4rem;
-}
-.logement-details h2 {
-  font-size: 2.8rem;
-  margin-bottom: 0;
-  margin-top: 30px;
-}
-.logement-details .tag-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(170px, 170px));
-  gap: 8px;
-}
-.logement-details .tag {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-  background-color: #FF6060;
-  font-size: 14px;
-  color: white;
-  border-radius: 10px;
-  padding: 5px 10px;
-  text-align: center;
-}
-.logement-details .host-info {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-.logement-details .host-info .host-name {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-.logement-details .host-info .host-name h3 {
-  margin: 0;
-  font-size: 1.4rem;
-}
-.logement-details .host-info img {
-  border-radius: 80px;
-  width: 80px;
-  height: auto;
-  margin: 0 0 5px 10px;
-}
-.logement-details .rating {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 10px;
-}
-.logement-details .rating-star {
-  width: 40px;
-  height: auto;
-  margin-right: 4px;
-}
-.logement-details .heading {
-  width: 70%;
-}
-.logement-details .host-rating {
-  width: 30%;
-  margin-top: 30px;
-}
-.logement-details .collapse_container {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.logement-details .collapse_container .collapse_element {
-  width: 47%;
-  margin: 0;
-}
-.logement-details .collapse_container .collapse_element ul {
-  padding: 0;
-}
-.logement-details .collapse_container .collapse_element ul li {
-  list-style: none;
+@media (max-width: 385px) {
+  .logement-details {
+    width: 91%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .logement-details .heading-host-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .logement-details .heading {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .logement-details h2, .logement-details p, .logement-details h3 {
+    color: #FF6060;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+  }
+  .logement-details p {
+    font-size: 1rem;
+  }
+  .logement-details h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0;
+    margin-top: 10px;
+  }
+  .logement-details .tag-container {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .logement-details .tag {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    background-color: #FF6060;
+    font-size: 12px;
+    color: white;
+    border-radius: 6px;
+    padding: 5px 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+  .logement-details .host-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .logement-details .host-info .host-name {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .logement-details .host-info .host-name h3 {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+  .logement-details .host-info img {
+    border-radius: 80px;
+    width: 40px;
+    height: auto;
+    margin: 0 0 5px 10px;
+  }
+  .logement-details .rating {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .logement-details .rating-star {
+    margin-top: 10px;
+    height: 23px;
+    margin-right: 3px;
+  }
+  .logement-details .host-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .logement-details .collapse_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .logement-details .collapse_container .collapse_element {
+    width: 100%;
+    margin: 0;
+    font-size: 14px;
+  }
+  .logement-details .collapse_container .collapse_element ul {
+    padding: 0;
+  }
+  .logement-details .collapse_container .collapse_element ul li {
+    list-style: none;
+  }
 }/*# sourceMappingURL=App.css.map */

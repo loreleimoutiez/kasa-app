@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'; // composant fourni par React Router 
 
 export function NotFound() {
     return (

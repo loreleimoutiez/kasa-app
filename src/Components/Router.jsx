@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom"; // utilisés pour définir la gestion de la navigation dans une application React en fonction de l'URL
 import { Home } from "../Pages/Home/Home";
 import { Details } from "../Pages/Details/Details";
 import { About } from "../Pages/About/About";
